@@ -40,3 +40,7 @@ process.on('SIGINT', function() {
     process.exit(0);
   });
 });
+
+require('./works');
+require('./skills');
+require('./blog');
