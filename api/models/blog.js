@@ -9,11 +9,12 @@ const mongoose = require('mongoose'),
     },
     text: {
       type: String,
+      default: "-",
       required: [true, 'Укажите содержимое статьи']
     },
     date: {
-      type: Date, 
-      default: Date.now,
+      type: String, 
+      default: "0.0.0",
       required: [true, 'Укажите дату публикации']
     }
   });

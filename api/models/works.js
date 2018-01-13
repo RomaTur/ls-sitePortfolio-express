@@ -9,12 +9,18 @@ const mongoose = require('mongoose'),
     },
     tech: {
       type: String,
+      default: "-",
       required: [true, 'Укажите технологии']
     },
     href: {
       type: String, 
-      default: '#',
+      default: "#",
       required: [true, 'Укажите ссылку на проект']
+    },
+    img: {
+      type: String, 
+      default: "upload/works/loremGif.gif",
+      required: [true, 'Укажите ссылку на картинку']
     }
   });
 

@@ -8,8 +8,8 @@ const mongoose = require('mongoose'),
       required: [true, 'Укажите название']
     },
     percents: {
-      type: Number,
-      default: 0,
+      type: String,
+      default: "0",
       required: [true, 'Укажите уровень владения']
     },
     type: {
