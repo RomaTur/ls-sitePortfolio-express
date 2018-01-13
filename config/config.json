@@ -1,9 +1,9 @@
 {
   "db": {
-    "host": "localhost",
-    "port": "27017",
-    "name": "ls-sitePortfolio",
-    "user": "",
-    "password": ""
+    "host": "ds247407.mlab.com",
+    "port": "47407",
+    "name": "ls-siteprtfolio",
+    "user": "guest",
+    "password": "loftteam"
   }
 }
