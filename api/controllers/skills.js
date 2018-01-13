@@ -18,43 +18,15 @@ module.exports.postSkills = (req, res) => {
       console.log('err', err)
     }
     console.log('удалено')
-  })
-
+  }).then(()=>{
   Skills.insertMany(reqBody, (err, reqBody) => {
     if (err) {
           console.log('err', err)
     }
     console.log('добавлено')
+    })
   })
 
-  // console.log(req)
-  // console.log(res)
-  // Skills.find().then(items => {
-  //   console.log('getSkills')
-  //   console.log(items)
-  //   res.status(200).json(items);
-  // });
-  // Skills.add(req.body).then(document => {
-  //   res.json(document)
-  // })
-  // const Model = mongoose.model('skills');
-
-  // let item = new Model({
-  //   title: "article2",
-  //   date: new Date(req.body.date),
-  //   body: "hi"
-  // });
-  // //сохраняем запись в базе
-  // item
-  //   .save()
-  //   .then(item => {
-  //     return res.status(201).json({ message: 'Запись успешно добавлена' });
-  //   })
-  //   .catch(err => {
-  //     res.status(400).json({
-  //       message: `При добавление записи произошла ошибка:  + ${err.message}`
-  //     });
-  //   });
 };
 
 // module.exports.createSkill = (req, res) => {

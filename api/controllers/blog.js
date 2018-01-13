@@ -18,13 +18,13 @@ module.exports.postArticles = (req, res) => {
       console.log('err', err)
     }
     console.log('удалено')
-  })
-
+  }).then(()=>{
   Blog.insertMany(reqBody, (err, reqBody) => {
     if (err) {
           console.log('err', err)
     }
     console.log('добавлено')
+    })
   })
 };
 
