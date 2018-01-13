@@ -17,6 +17,11 @@ const mongoose = require('mongoose'),
       default: "#",
       required: [true, 'Укажите ссылку на проект']
     },
+    linkText: {
+      type: String, 
+      default: "Посмотреть",
+      required: [true, 'Укажите название для кнопки']
+    },
     img: {
       type: String, 
       default: "upload/works/loremGif.gif",
