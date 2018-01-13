@@ -5,7 +5,7 @@ const config = require('../../config/config');
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+  .connect(`mongodb://${config.db.user}:${config.db.password}@${config.db.host}:${config.db.port}/${config.db.name}`, {
     useMongoClient: true
   })
   .catch(e => {
