@@ -1,10 +1,21 @@
-
 {
   "db": {
-    "host": "localhost",
-    "port": "27017",
+    "host": "ds247407.mlab.com",
+    "port": "47407",
     "name": "ls-siteportfolio",
     "user": "guest",
     "password": "loftteam"
+  },
+  "mail": {
+    "subject": "Сообщение с сайта-портфолио",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "test",
+        "pass": "test"
+      }
+    }
   }
 }

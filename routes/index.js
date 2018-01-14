@@ -6,6 +6,7 @@ const ctrlWorks = require('../api/controllers/works');
 const ctrlSkills = require('../api/controllers/skills');
 const ctrlLogin = require('../controllers/login');
 const ctrlUser = require('../api/controllers/user');
+const ctrlMail = require('../controllers/mail');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -58,5 +59,6 @@ router.post('/about', ctrlSkills.postSkills);
 
 // router.get('/avatar', ctrlAvatar.getAvatar);
 // router.post('/avatar', ctrlAvatar.setAvatar);
+router.post('/contact', ctrlMail.sendEmail);
 
 module.exports = router;
