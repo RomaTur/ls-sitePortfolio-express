@@ -4,20 +4,38 @@ var router = express.Router();
 const ctrlBlog = require('../api/controllers/blog');
 const ctrlWorks = require('../api/controllers/works');
 const ctrlSkills = require('../api/controllers/skills');
+const ctrlLogin = require('../controllers/login');
+const ctrlUser = require('../api/controllers/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Роман Турусов' });
 });
+router.post('/', ctrlLogin.authorization);
+router.post('/user', ctrlUser.isAuth);
+
+
+const isAdmin = (req, res, next) => {
+  // если в сессии текущего пользователя есть пометка о том, что он является
+  // администратором
+  if (req.session.isAdmin) {
+    //то всё хорошо :)
+    return next();
+  }
+  //если нет, то перебросить пользователя на главную страницу сайта
+  res.redirect('/');
+};
 
 /* GET admin page. */
-router.get('/admin', function(req, res, next) {
-  res.render('admin', { title: 'Панель администратора' });
+// router.get('/admin', function(req, res, next) {
+//   res.render('admin', { title: 'Панель администратора' });
+// });
+// router.post('/admin', function(req, res, next) {
+//   res.render('admin', { title: 'Панель администратора' });
+// });
+router.get('/admin', isAdmin, function(req, res, next) {
+    res.render('admin', { title: 'Панель администратора' });
 });
-router.post('/admin', function(req, res, next) {
-  res.render('admin', { title: 'Панель администратора' });
-});
-
 
 router.get('/blog', ctrlBlog.getArticles);
 router.post('/blog', ctrlBlog.postArticles);

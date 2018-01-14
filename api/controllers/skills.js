@@ -26,6 +26,8 @@ module.exports.postSkills = (req, res) => {
     console.log('добавлено')
     })
   })
+  
+
 
 };
 
