@@ -1,7 +1,7 @@
 {
   "db": {
-    "host": "localhost",
-    "port": "27017",
+    "host": "ds247407.mlab.com",
+    "port": "47407",
     "name": "ls-siteportfolio",
     "user": "guest",
     "password": "loftteam"
