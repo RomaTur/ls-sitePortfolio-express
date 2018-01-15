@@ -1,11 +1,12 @@
 const nodemailer = require('nodemailer');
-const config = require('../config.json');
+const config = require('../config/config.json');
 
 module.exports.sendEmail = (req, res) => {
   //требуем наличия имени, обратной почты и текста
   if (!req.body.name || !req.body.email || !req.body.text) {
     //если что-либо не указано - сообщаем об этом
     return res.redirect('/?msg=Все поля нужно заполнить!');
+    console.log('all inputs required')
   }
   //инициализируем модуль для отправки писем и указываем данные из конфига
   const transporter = nodemailer.createTransport(config.mail.smtp);
@@ -24,7 +25,9 @@ module.exports.sendEmail = (req, res) => {
       //если есть ошибки при отправке - сообщаем об этом
       if (error) {
         return res.redirect('/?msg=При отправке письма произошла ошибка: ' + error.message);
+        console.log('mail error')
       }
       res.redirect('/?msg=Письмо успешно отправлено');
+      console.log('mail success')
     });
 };
