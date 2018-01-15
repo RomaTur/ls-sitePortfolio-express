@@ -1,10 +1,10 @@
 {
   "db": {
-    "host": "ds247407.mlab.com",
-    "port": "47407",
-    "name": "ls-siteportfolio",
-    "user": "guest",
-    "password": "loftteam"
+    "host": "test",
+    "port": "test",
+    "name": "test",
+    "user": "test",
+    "password": "test"
   },
   "mail": {
     "subject": "Сообщение с сайта-портфолио",

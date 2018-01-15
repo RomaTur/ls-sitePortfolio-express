@@ -25,6 +25,9 @@ cd ls-sitePortfolio
 npm i
 ```
 
+### Измените настройки для подключения к базе MongoDB в config.json
+
+
 Запустите сервер
 ``` bash
 npm start
