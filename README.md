@@ -16,7 +16,7 @@
 
 Скачайте репозиторий
 ``` bash
-git clone https://github.com/RomaTur/ls-sitePortfolio.git
+git clone https://github.com/RomaTur/ls-sitePortfolio-express.git
 ```
 
 Перейдите в папку и скачайте зависимости
