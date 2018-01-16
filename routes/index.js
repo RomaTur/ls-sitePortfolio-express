@@ -51,7 +51,7 @@ router.post('/works', ctrlWorks.postWorks);
 // router.put('/works/:id', ctrlWorks.editWork);
 // router.delete('/works/:id', ctrlWorks.deleteWork);
 
-router.get('/about', ctrlSkills.getSkills);
+router.get('./about', ctrlSkills.getSkills);
 router.post('/about', ctrlSkills.postSkills);
 // router.post('/about', ctrlSkills.createSkill);
 // router.put('/about/:id', ctrlSkills.editSkill);
