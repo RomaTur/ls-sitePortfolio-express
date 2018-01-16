@@ -21,7 +21,7 @@ git clone https://github.com/RomaTur/ls-sitePortfolio-express.git
 
 Перейдите в папку и скачайте зависимости
 ``` bash
-cd ls-sitePortfolio
+cd ls-sitePortfolio-express
 npm i
 ```
 
