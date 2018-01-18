@@ -2,7 +2,7 @@ const http = require('request');
 var express = require('express');
 var router = express.Router();
 const apiOptions = {
-  server: "http://localhost:3000"
+  server: "http://localhost"
 };
 
 module.exports.getLoginPage = (req, res, next) => {
