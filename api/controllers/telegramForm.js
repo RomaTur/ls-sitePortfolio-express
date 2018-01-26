@@ -18,7 +18,12 @@ module.exports.sendMsg = (req, res) => {
     console.log('error:', error); // Print the error if one occurred
     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     console.log('body:', body); // Print the HTML for the Google homepage.
+    if(response.statusCode===200){
+      res.status(200).json({status: 'ok', message: 'Успешно отправлено!'});
+    }
+    if(response.statusCode===400){
+      res.status(400).json({status: 'error', message: 'Произошла ошибка!'});
+    }
   });
 
-  res.status(200).json({status: 'ok', message: 'Отправилось!'});
 }

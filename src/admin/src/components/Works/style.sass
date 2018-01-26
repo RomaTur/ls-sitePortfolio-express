@@ -1,0 +1,33 @@
+.title
+    font-family: 'roboto', monospace
+    font-size: 23px
+    font-weight: 500
+    color: $color-night
+    padding-top: 40px
+    @include phone
+        padding: 19px 0
+.works
+    display: flex
+    justify-content: space-between
+    padding: 40px 0
+    @include tablet
+        flex-direction: column
+    @include phone
+        padding-top: 0
+
+.input__submit
+    padding: 12px 0
+    background: $color-aqua
+    width: 120px
+    border-radius: 5px
+    color: $color-white
+    font-family: 'roboto', monospace
+    font-size: 16px
+    font-weight: 400
+    cursor: pointer
+    transition: 0.3s
+    @extend %flex-center
+    &:hover
+        background: $color-aqua2
+    @include tablet
+        margin-bottom: 30px

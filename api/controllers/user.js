@@ -3,7 +3,6 @@ module.exports.isAuth = function (req, res) {
     //получаем модель пользователя и шифруем введенный пароль
     const Model = mongoose.model('user');
   //пытаемся найти пользователя с указанным логином
-  console.log(res)
   Model
     .findOne({login: req.body.login})
     .then(user => {
