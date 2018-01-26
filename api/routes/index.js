@@ -18,8 +18,11 @@ const ctrlUser = require('../controllers/user');
 const ctrlBlog = require('../controllers/blog');
 const ctrlWorks = require('../controllers/works');
 const ctrlSkills = require('../controllers/skills');
+const ctrlTelegram = require('../controllers/telegramForm');
+
 
 router.post('/user', ctrlUser.isAuth);
+router.post('/telegram', ctrlTelegram.sendMsg);
 
 router.get('/blog', ctrlBlog.getArticles);
 router.post('/blog', ctrlBlog.postArticles);
