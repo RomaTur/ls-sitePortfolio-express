@@ -1,7 +1,7 @@
 module.exports = (elemClass, buttonClass, fnActive, fn) => {
     ////////////
-    fn = fn || function(){console.log('empty fn in clickToggleClass')};
-    fnActive = fnActive || function(){console.log('empty fnActive in clickToggleClass')}; 
+    fn = fn || function(){};
+    fnActive = fnActive || function(){}; 
     
     let elem = document.querySelector('.' + elemClass)
     let button = document.querySelector('.' + buttonClass)
@@ -10,7 +10,6 @@ module.exports = (elemClass, buttonClass, fnActive, fn) => {
         (elem.classList.contains(elemClass + '--active')) ? fnActive() : fn();
     };
     if (elem && button) {
-        console.log('in clickToggleClass');
         button.addEventListener('click', containerToggle);
     }
     ///////////////

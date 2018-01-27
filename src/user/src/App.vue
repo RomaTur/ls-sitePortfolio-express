@@ -35,6 +35,7 @@
   router-view
 </template>
 
+
 <script>
 import parallaxBg from './modules/parallaxMountains'
 export default {

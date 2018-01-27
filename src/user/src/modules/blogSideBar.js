@@ -9,7 +9,6 @@ module.exports = (sideBarClass, buttonClass, jump) => {
 
     const clickToggleClass = require('./clickToggleClass')
     const doFnElemVisible = require('./doFnElemVisible')
-    // var jump = require('jump.js')
     const moveSideBar = require('./moveSideBar')
     const activateSideBarLink = require('./activateSideBarLink')
 
@@ -52,7 +51,6 @@ module.exports = (sideBarClass, buttonClass, jump) => {
     };
 
     let sideBarJumpFn = () => {
-        console.log('in sideBarJumpFn')
         sideBar.addEventListener('click', (event) => {
             event.preventDefault()
             let targetLink = event.target;
@@ -80,7 +78,6 @@ module.exports = (sideBarClass, buttonClass, jump) => {
 
     if (sideBar && button) {
         ////////////
-        console.log('in blogSideBar')
         activateSideBarLink();
         let startLeftPos = window.getComputedStyle(button).left;
         button.style.left = -100 + 'px';

@@ -100,7 +100,7 @@ block content
 
 
             a.welcome__login-button(href='#') Аторизоваться
-            .welcome__footer <span class='welcome__footer-name'>© Роман Турусов</span> <span class='welcome__footer-line'>|</span> создано с любовью в LoftSchool | 2016
+            .welcome__footer <span class='welcome__footer-name'>© Роман Турусов</span> <span class='welcome__footer-line'>|</span> создано с любовью в LoftSchool | 2018
     
 </template>
 
@@ -147,7 +147,6 @@ export default {
           if(!flag){
               function toJSONString(form) {
                   var obj = {}
-                  console.log(form)
                   var elements = form.querySelectorAll('input, select, textarea')
                   for (var i = 0; i < elements.length; ++i) {
                     var element = elements[i]

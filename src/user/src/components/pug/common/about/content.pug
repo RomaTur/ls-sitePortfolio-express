@@ -14,7 +14,7 @@
                     h3.page__title-text Кто я
                     .page__title-line
                 .page__about-desc
-                    p.page__about-paragraph Я веб разработчик из Сарова. Мне 23 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p.page__about-paragraph Доброго времени суток, меня зовут Роман. Мне 23 года. Интересуюсь разработкой Web сайтов, Web приложений, приложений для Mac и ПО для микроконтроллеров. Для меня программирование не просто трудовой процесс, а еще творчество и увлечение.
                     p.page__about-paragraph Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
 
@@ -26,30 +26,6 @@
         .page__skills-desc Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 
         .skills
-            //- .skills__row.fronend
-            //-     .skills__title Frontend
-            //-     .skill(
-            //-         v-for='skill in skills'
-            //-         v-if='skill.type === 1'
-            //-         :data-pct='skill.percents' 
-            //-         :name='skill.name')
-            //-         +skillCircle()
-            //- .skills__row.backend
-            //-      .skills__title Backend
-            //-      .skill(
-            //-          v-for='skill in skills'
-            //-          v-if='skill.type === 2'
-            //-          :data-pct='skill.percents' 
-            //-          :name='skill.name')
-            //-          +skillCircle
-            //-  .skills__row.workflow
-            //-      .skills__title WorkFlow
-            //-      .skill(v-for='skill in skills'
-            //-          v-if='skill.type === 3'
-            //-          :data-pct='skill.percents' 
-            //-          :name='skill.name')
-            //-          +skillCircle()
-
             .skills__row(
                 v-for='skillType in skillTypes'
                 :class='skillType')

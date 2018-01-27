@@ -16,12 +16,10 @@ module.exports = (form) => {
     request.done(function (data) {
       // Вывод сообщения об успешной отправке
         funcAfterTelegramForm(true, data, message, formNm);
-        console.log(data);
     });
     request.fail(function (jqXHR, textStatus) {
         // Вывод сообщения об ошибке отправки
         funcAfterTelegramForm(false, data, message, formNm);
-        console.log(data);
     });
     return false
 })

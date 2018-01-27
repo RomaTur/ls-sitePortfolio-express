@@ -5,7 +5,6 @@ module.exports = (mapSelector) => {
   //////////
   let el = document.querySelector('#' + mapSelector);
   if (el) {
-    console.log('in mapInit')
     var NizNov = {
       lat: 56.314211,
       lng: 43.991296
