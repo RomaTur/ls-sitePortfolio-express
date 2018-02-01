@@ -12,7 +12,7 @@ mixin listItem(text, className, href, name, secClass)
         li(class= className+'__item')
             if(secClass)
                 #{secClass}
-            a(class= className+'__link' href= href)= text
+            a(target='__blank' class= className+'__link' href= href)= text
                 if(name)
                     +svg(className+'__ico', name)
             if(secClass)
