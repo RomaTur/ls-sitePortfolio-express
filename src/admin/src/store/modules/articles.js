@@ -17,18 +17,15 @@ const posts = {
   actions: {
     fetchArticles({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.get('/blog').then(response => {
+      $http.get('/get/blog').then(response => {
         state.data = response.body
       }, response => {
         console.error(response)
       })
-      // this.axios.get('/blog').then((response) => {
-      //   console.log(response.data)
-      // })
     },
     postArticles({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.post('/blog', JSON.stringify(state.data))
+      $http.post('/post/blog', JSON.stringify(state.data))
         .then(() => {
           this.fetchArticles()
         })

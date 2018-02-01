@@ -15,9 +15,9 @@ module.exports.sendMsg = (req, res) => {
   msg = encodeURI(msg)
   console.log(msg)
   http.post(`https://api.telegram.org/bot${config.telegram.token}/sendMessage?chat_id=${config.telegram.chat}&parse_mode=html&text=${msg}`, function (error, response, body) {
-    console.log('error:', error); // Print the error if one occurred
-    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    console.log('body:', body); // Print the HTML for the Google homepage.
+    console.log('error:', error); 
+    console.log('statusCode:', response && response.statusCode); 
+    console.log('body:', body); 
     if(response.statusCode===200){
       res.status(200).json({status: 'ok', message: 'Успешно отправлено!'});
     }

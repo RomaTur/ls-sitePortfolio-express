@@ -89,13 +89,11 @@ module.exports = () => {
             }
         });
 
-        /////////инициализация слайдов/////
         slider.currentProject = slider.works[workNum];
         slider.nextProject = slider.works[workNum + 1];
         slider.nextProject2 = slider.works[workNum + 2]
         slider.previousProject = slider.works[slider.works.length - 1];
         slider.previousProject2 = slider.works[slider.works.length - 2];
-        //////функции по замене слайдов//////
         let changeCurrent = (workNum, $this) => {
             $this.currentProject = $this.works[workNum];
             (workNum < $this.works.length - 1) ? $this.nextProject = $this.works[workNum + 1]: $this.nextProject = $this.works[0];

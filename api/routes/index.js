@@ -3,16 +3,11 @@ const router = express.Router();
 
 
 const isAdmin = (req, res, next) => {
-  // если в сессии текущего пользователя есть пометка о том, что он является
-  // администратором
   if (req.session.isAdmin) {
-    //то всё хорошо :)
     return next();
   }
-  //если нет, то перебросить пользователя на главную страницу сайта
   res.redirect('/');
 };
-
 
 const ctrlUser = require('../controllers/user');
 const ctrlBlog = require('../controllers/blog');
@@ -22,28 +17,16 @@ const ctrlTelegram = require('../controllers/telegramForm');
 
 
 router.post('/user', ctrlUser.isAuth);
-router.post('/telegram', ctrlTelegram.sendMsg);
+router.post('/post/telegram', ctrlTelegram.sendMsg);
 
-router.get('/blog', ctrlBlog.getArticles);
-router.post('/blog', ctrlBlog.postArticles);
-// router.post('/blog', ctrlBlog.createArticle);
-// router.put('/blog/:id', ctrlBlog.editArticle);
-// router.delete('/blog/:id', ctrlBlog.deleteArticle);
+router.get('/get/blog', ctrlBlog.getArticles);
+router.post('/post/blog', ctrlBlog.postArticles);
 
 
-router.get('/works', ctrlWorks.getWorks);
-router.post('/works', ctrlWorks.postWorks);
-// router.post('/works', ctrlWorks.createWork);
-// router.put('/works/:id', ctrlWorks.editWork);
-// router.delete('/works/:id', ctrlWorks.deleteWork);
+router.get('/get/works', ctrlWorks.getWorks);
+router.post('/post/works', ctrlWorks.postWorks);
 
-router.get('/about', ctrlSkills.getSkills);
-router.post('/about', ctrlSkills.postSkills);
-// router.post('/about', ctrlSkills.createSkill);
-// router.put('/about/:id', ctrlSkills.editSkill);
-// router.delete('/about/:id', ctrlSkills.deleteSkill);
-
-// router.get('/avatar', ctrlAvatar.getAvatar);
-// router.post('/avatar', ctrlAvatar.setAvatar);
+router.get('/get/about', ctrlSkills.getSkills);
+router.post('/post/about', ctrlSkills.postSkills);
 
 module.exports = router;

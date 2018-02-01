@@ -12,10 +12,7 @@ new Vue({
 })
 
 const domready = function () {
-  // DOM дерево загрузилось
-
   svg4everybody()
-  // запуск скрипта чтобы все внешние подключения svg были кроссбраузерными
   document.querySelector('.body').style.overflowX = 'hidden'
 }
 // //////////domready/////////////

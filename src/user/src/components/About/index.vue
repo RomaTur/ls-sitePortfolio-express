@@ -6,10 +6,6 @@
     include ../pug/common/about/header
     .menu
         ul.menu__list
-            //- +listItem('Мои работы', 'menu', 'works.html', '', secClass)
-            //- +listItem('Блог', 'menu', 'blog.html', '', secClass)
-            //- +listItem('Обо мне', 'menu', 'about.html', '', secClass)
-            //- +listItem('Авторизация', 'menu', 'index.html', '', secClass)
             router-link(
                v-for="(page, index) in pages"
                :key="index"
@@ -30,7 +26,6 @@
 <script>
 
 import { mapActions, mapGetters, mapMutations } from 'vuex'
-// import parallaxBg from '../../modules/parallaxMountains'
 import smoothScrollClick from '../../modules/smothScrollClick.js'
 import fullMenu from '../../modules/fullMenu'
 import mapInit from '../../modules/maps'
@@ -67,16 +62,11 @@ export default {
   },
   mounted(){
     this.fetchSkills()
-
     animatePreloader()
     isScroll(true)
-    // parallaxBg(); //запуск скрипта инициализации паралакса
     smoothScrollClick('header__arrow-img', 'content', undefined, jump);
     fullMenu('hamburger', 'menu');
-
     mapInit('map');
-    // skillProgressInit('skill', 'skill__bar', 'data-pct'); //классы без .
-
   },
   computed: {
     ...mapGetters('skills', ['skills'])

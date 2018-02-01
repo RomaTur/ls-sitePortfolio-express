@@ -6,10 +6,6 @@
     include ../pug/common/works/header
     .menu
         ul.menu__list
-            //- +listItem('Мои работы', 'menu', 'works.html', '', secClass)
-            //- +listItem('Блог', 'menu', 'blog.html', '', secClass)
-            //- +listItem('Обо мне', 'menu', 'about.html', '', secClass)
-            //- +listItem('Авторизация', 'menu', 'index.html', '', secClass)
             router-link(
                v-for="(page, index) in pages"
                :key="index"
@@ -20,8 +16,6 @@
               .menu__line
               a.menu__link {{page.name}}
               .menu__line
-    //- include ../pug/common/works/content
-    //- pre {{works}}
     Slider
     .footer
       include ../pug/common/works/footer
@@ -31,7 +25,6 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex'
-// import parallaxBg from '../../modules/parallaxMountains'
 import smoothScrollClick from '../../modules/smothScrollClick.js'
 import fullMenu from '../../modules/fullMenu'
 import form from '../../modules/form'
@@ -52,28 +45,14 @@ export default {
     ]
   }),
   mounted(){
-
-    // this.fetchWorks()
     animatePreloader()
     isScroll(true)
-    // parallaxBg(); //запуск скрипта инициализации паралакса
     smoothScrollClick('header__arrow-img', 'content', undefined, jump);
     smoothScrollClick('footer__arrow', 'wrapper', undefined, jump);
     fullMenu('hamburger', 'menu');
     sendTelegramMsg('telegramForm')
-    // doFnElemVisible({
-    //   elemClass: 'content',
-    //   fn: blurForm
-    // })
-    // doFnElemVisible({
-    //   elemClass: 'form',
-    //   fn: blurForm
-    // })
     blurForm()
     form();
-  },
-  computed: {
-    // ...mapGetters('works', ['works'])
   },
   components: {
     Slider: require('./Slider/index.vue'),

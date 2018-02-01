@@ -1,7 +1,6 @@
 <template lang="pug">
   .content
     include ../../pug/config/mixins
-    //- pre {{works}}
     .content__title
         .content__title-line
         h2.content__title-text Мои работы

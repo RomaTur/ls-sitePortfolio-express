@@ -1,6 +1,4 @@
-// import ymaps from 'ymaps'
-var GoogleMapsLoader = require('google-maps'); // only for common js environments 
-
+var GoogleMapsLoader = require('google-maps'); 
 module.exports = (mapSelector) => {
   //////////
   let el = document.querySelector('#' + mapSelector);
@@ -25,7 +23,6 @@ module.exports = (mapSelector) => {
         center: NizNov,
         mapTypeControl: false,
         disableDefaultUI: true,
-        // mapTypeId: 'satellite'
         styles: [
     {
       "featureType": "administrative",

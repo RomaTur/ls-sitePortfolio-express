@@ -1,23 +1,18 @@
 .form
     @extend %flex-center
     flex-direction: column
-    // margin-bottom: 150px
     border-radius: 5px
     position: relative
     overflow: hidden
     &__container
         padding: 45px 20px 20px 20px
-        // background: fade-out($color-white, 0.5)
-        // filter: blur(3px)
         @extend %flex-center
         flex-direction: column
         @include tablet
             padding: 30px 20px 20px 20px
         @include phone
             padding: 20px 18px 24px 18px
-            // width: 284px
     &__blur
-        // opacity: 0.6
         @include bg-img('~img/works-footer-bg.jpg')
         @extend %bg-config
         filter: blur(10px)

@@ -29,5 +29,4 @@ userSchema.methods.validPassword = function (password) {
   return this.hash === hash;
 };
 
-//просим mongoose сохранить модель для ее дальнейшего использования
 mongoose.model('user', userSchema);

@@ -62,30 +62,21 @@ export default {
       })
     },
     fileSelect(evt) {
-      var f = evt.target.files // FileList object
-      // Loop through the FileList and render image files as thumbnails.
-      // files.forEach(f => {
-      //   // Only process image files.
+      var f = evt.target.files
       if (!f[0].type.match('image.*')) {
-        // continue
         console.log('not match')
       }
       var reader = new FileReader()
-      // Closure to capture the file information.
       reader.onload = (function(theFile) {
         return function(e) {
-          // Render thumbnail.
           const list = document.getElementById('list')
           list.innerHTML = ['<img src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('')
-          // var imgSrc = e.target.result
         }
       })(f)
-      // Read in the image file as a data URL.
       reader.readAsDataURL(f[0])
       console.log(f[0])
       console.log(f[0].name)
       this.img = '../upload/works/' + f[0].name
-      // })
       this.img = '../upload/works/' + f[0].name
     }
   },

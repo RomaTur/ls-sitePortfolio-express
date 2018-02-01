@@ -3,10 +3,6 @@
     include ../pug/config/mixins
     .info__links
         ul.info-pages
-            //- +listItem('Мои работы', 'info-pages', '/works')
-            //- +listItem('Обо мне', 'info-pages', '/about')
-            //- +listItem('Блог', 'info-pages', 'blog.html')
-            //- +listItem('Авторизация', 'info-pages', 'index.html')
             router-link(
                v-for="(page, index) in pages"
                :key="index"

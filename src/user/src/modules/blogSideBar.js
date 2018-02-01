@@ -1,18 +1,9 @@
-// import clickToggleClass from './clickToggleClass'
-// import doFnElemVisible from './doFnElemVisible'
-// import jump from 'jump.js'
-// import moveSideBar from './moveSideBar'
-// import activateSideBarLink from './activateSideBarLink'
-
 module.exports = (sideBarClass, buttonClass, jump) => {
-    ////////////
 
     const clickToggleClass = require('./clickToggleClass')
     const doFnElemVisible = require('./doFnElemVisible')
     const moveSideBar = require('./moveSideBar')
     const activateSideBarLink = require('./activateSideBarLink')
-
-
 
     let sideBar = document.querySelector('.' + sideBarClass)
     let button = document.querySelector('.' + buttonClass)
@@ -20,12 +11,10 @@ module.exports = (sideBarClass, buttonClass, jump) => {
         var initialPoint;
         var finalPoint;
         document.addEventListener('touchstart', function (event) {
-            // event.preventDefault();
             event.stopPropagation();
             initialPoint = event.changedTouches[0];
         }, false);
         document.addEventListener('touchend', function (event) {
-            // event.preventDefault();
             event.stopPropagation();
             finalPoint = event.changedTouches[0];
             var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
@@ -54,10 +43,8 @@ module.exports = (sideBarClass, buttonClass, jump) => {
         sideBar.addEventListener('click', (event) => {
             event.preventDefault()
             let targetLink = event.target;
-            // targetLink.children('.articles__item').classList.add('articles__item--active')
             let anchorNum = targetLink.getAttribute('href');
             if (anchorNum) {
-                // anchorNum = anchorNum.slice(1);
                 let targetArticle = document.querySelector('#article' + anchorNum);
                 if (targetArticle) {
                     let offsetArticle;

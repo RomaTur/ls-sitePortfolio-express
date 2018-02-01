@@ -1,6 +1,4 @@
-// import doFnElemVisible from './doFnElemVisible'
 module.exports = () => {
-    ///////////
     let doFnElemVisible = require('./doFnElemVisible');
     let sideBarItems = document.querySelectorAll('.article__item');
     let articles = document.querySelectorAll('.article');
@@ -29,6 +27,5 @@ module.exports = () => {
             loop: true
         });
     }
-
 
 };

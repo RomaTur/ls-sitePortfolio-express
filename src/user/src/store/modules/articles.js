@@ -11,7 +11,7 @@ const posts = {
   actions: {
     fetchArticles({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.get('/blog').then(response => {
+      $http.get('/get/blog').then(response => {
         state.data = response.body
       }, response => {
         console.error(response)

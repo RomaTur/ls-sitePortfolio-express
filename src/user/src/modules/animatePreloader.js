@@ -1,6 +1,3 @@
-// import { setTimeout } from "timers";
-// import isScroll from './isScroll.js'
-
 module.exports = () => {
   const ImagePreloader = require('image-preloader')
   const isScroll = require('./isScroll.js')    
@@ -58,7 +55,6 @@ module.exports = () => {
     let imagePreloader = new ImagePreloader()
     imagePreloader.preload('../../user/dist/layer1.png', '../../user/dist/layer2.png', '../../user/dist/layer3.png', '../../user/dist/layer4.png', '../../user/dist/layer5.png', '../../user/dist/layer6.png', '../../user/dist/layer7.png', '../../user/dist/layer8.png', '../../user/dist/layer9.png', '../../user/dist/layer10.png')
     .then(function(status){
-        // console.log('all done!', status)
         status.forEach(element => {
             if(element.status != true){
                 document.querySelector('.header').style.backgroundImage = 'url("../../user/dist/bg.jpg")'

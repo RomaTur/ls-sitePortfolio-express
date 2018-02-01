@@ -34,7 +34,6 @@ module.exports = (options) => {
         if (checkDistance(scrollTop, elem).top <= 0 && checkDistance(scrollTop, elem).bottom <= 0) {
 
             fn();
-            // (loop) ? fnDone = false : fnDone = true
             (loop) ? fnDone = false: fnDone = true
         }
 

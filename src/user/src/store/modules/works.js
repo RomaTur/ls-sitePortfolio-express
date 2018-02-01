@@ -9,7 +9,7 @@ const works = {
   actions: {
     fetchWorks({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.get('/works').then(response => {
+      $http.get('/get/works').then(response => {
         state.data = response.body
       }, response => {
         console.error(response)

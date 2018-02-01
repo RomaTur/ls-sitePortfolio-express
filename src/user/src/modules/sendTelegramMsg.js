@@ -20,7 +20,7 @@ module.exports = (formId) => {
       event.preventDefault()
       const json = toJSONString(form)
       const formReq = new XMLHttpRequest()
-      formReq.open('POST', '/telegram', true)
+      formReq.open('POST', '/post/telegram', true)
       formReq.onload = function(oEvent) {
         if (formReq.status === 200) {
           swal({

@@ -1,4 +1,3 @@
-
 const works = {
   namespaced: true,
   state: {
@@ -18,19 +17,16 @@ const works = {
   actions: {
     fetchWorks({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.get('/works').then(response => {
+      $http.get('/get/works').then(response => {
         state.data = response.body
       },
       response => {
         console.error(response)
       })
-      // this.axios.get('/works').then((response) => {
-      //   console.log(response.data)
-      // })
     },
     postWorks({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.post('/works', JSON.stringify(state.data))
+      $http.post('/post/works', JSON.stringify(state.data))
         .then(() => {
           this.fetchWorks()
         })

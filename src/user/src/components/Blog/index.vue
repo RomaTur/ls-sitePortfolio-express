@@ -52,7 +52,6 @@ export default {
     this.fetchArticles()
     animatePreloader()
     isScroll(true)
-    // parallaxBg(); //запуск скрипта инициализации паралакса
     smoothScrollClick('header__arrow-img', 'content', undefined, jump);
     fullMenu('hamburger', 'menu');
   },

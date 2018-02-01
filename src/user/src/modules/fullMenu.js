@@ -1,6 +1,3 @@
-// import isScroll from './isScroll'
-// import clickToggleClass from './clickToggleClass'
-
 module.exports = (buttonClass, viewClass) => {
 
     const isScroll = require('./isScroll')

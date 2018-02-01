@@ -6,27 +6,6 @@ block content
         - var title = 'Роман Турусов'
         - var page = 'index'
         include ../pug/config/mixins
-        //- .parallax#parallax
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer10.png`).parallax__layer-img.parallax__layer-img--sky
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer9.png`).parallax__layer-img
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer8.png`).parallax__layer-img
-        //-     .parallax__layer#cloud__three
-        //-         img(src=`~img/mountains/originalCompressed/layer7.png`).parallax__layer-img
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer6.png`).parallax__layer-img
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer5.png`).parallax__layer-img
-        //-     .parallax__layer#cloud__two
-        //-         img(src=`~img/mountains/originalCompressed/layer4.png`).parallax__layer-img
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer3.png`).parallax__layer-img
-        //-     .parallax__layer
-        //-         img(src=`~img/mountains/originalCompressed/layer2.png`).parallax__layer-img
-        //-     .parallax__layer#cloud__one
-        //-         img(src=`~img/mountains/originalCompressed/layer1.png`).parallax__layer-img
         .welcome
             .flip__container
                 .welcome__intro 
@@ -40,7 +19,6 @@ block content
                             +listItem('', 'social', 'https://github.com/RomaTur', 'github')
                             +listItem('', 'social', 'https://twitter.com/RoMan_111', 'tw')
                     ul.nav__pages
-                        //- +listItem('Мои работы', 'nav', 'works.html')
                         router-link(
                             v-for="(page, index) in pages"
                             :key="index"
@@ -49,8 +27,6 @@ block content
                             exact
                           ).nav__item
                             a.nav__link {{page.name}}
-                        //- +listItem('Обо мне', 'nav', 'about.html')
-                        //- +listItem('Блог', 'nav', 'blog.html')
                 .login
                     form(action="/" method="POST" class="login__form")
                         .login__container
@@ -105,7 +81,6 @@ block content
 </template>
 
 <script>
-// import parallaxBg from '../../modules/parallaxMountains'
 import flipLoginForm from '../../modules/flipLoginForm'
 import animatePreloader from '../../modules/animatePreloader'
 import swal from 'sweetalert'
@@ -194,9 +169,7 @@ export default {
   },
   mounted(){
       animatePreloader()
-      flipLoginForm('welcome__login-button', 'login__buttons-main', 'flip__container'); //flip container need to be a class
-    //   parallaxBg(); //запуск скрипта инициализации паралакса
-    // let submitButton = document.querySelector('.login__buttons-button')
+      flipLoginForm('welcome__login-button', 'login__buttons-main', 'flip__container'); 
   }
 }
 </script>

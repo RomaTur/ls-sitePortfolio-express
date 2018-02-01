@@ -1,4 +1,3 @@
-//функция разрешения/запрета скролла//
 let prevDef = (event) => {
     event.preventDefault();
 }

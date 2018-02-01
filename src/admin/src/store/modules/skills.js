@@ -23,7 +23,7 @@ const skills = {
   actions: {
     fetchSkills({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.get('/about').then(response => {
+      $http.get('/get/about').then(response => {
         state.data = response.body
       }, response => {
         console.error(response)
@@ -31,7 +31,7 @@ const skills = {
     },
     postSkills({ state, rootGetters }) {
       const { $http } = rootGetters
-      $http.post('/about', JSON.stringify(state.data))
+      $http.post('/post/about', JSON.stringify(state.data))
         .then(() => {
           this.fetchSkills()
         })
