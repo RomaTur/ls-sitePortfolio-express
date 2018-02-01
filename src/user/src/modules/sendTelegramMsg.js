@@ -37,7 +37,7 @@ module.exports = (formId) => {
           })
           document.querySelector('.swal-button-container').style.opacity = '0'
         }
-        if (formReq.status === 400) {
+        if (formReq.status !== 200) {
           swal({
             title: 'Произошла ошибка!',
             icon: 'error',
