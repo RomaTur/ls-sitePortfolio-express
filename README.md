@@ -1,8 +1,6 @@
 
 > Full project
 
-> #### README может измениться на последнем этапе разработки
-
 <h3 align='center'>Выпускной проект курса по веб-разработке от <a href='https://loftschool.com' target='_blank'> Loftschool</a></h3>
 
 
