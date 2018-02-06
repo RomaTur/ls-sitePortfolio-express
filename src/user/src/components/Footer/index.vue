@@ -16,8 +16,8 @@
             +listItem('', 'info-social', 'https://github.com/RomaTur', 'github_round')
             +listItem('', 'info-social', 'https://twitter.com/RoMan_111', 'twitter_round')
     .info__desc
-        .info__about Я веб-разработчик из Сарова, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-        .info__credits © Роман Турусов | создано с любовью в LoftSchool | 2018
+        .info__about Будем на связи, буду рад сотрудничеству. 
+        .info__credits © Роман Турусов | создано с любовью | 2018
 
 </template>
 

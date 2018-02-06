@@ -76,7 +76,7 @@ block content
 
 
             a.welcome__login-button(href='#') Аторизоваться
-            .welcome__footer <span class='welcome__footer-name'>© Роман Турусов</span> <span class='welcome__footer-line'>|</span> создано с любовью в LoftSchool | 2018
+            .welcome__footer <span class='welcome__footer-name'>© Роман Турусов</span> <span class='welcome__footer-line'>|</span> создано с любовью | 2018
     
 </template>
 
